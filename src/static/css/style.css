@@ -1,0 +1,100 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    background-image: linear-gradient(80deg, salmon, pink);
+    font-size: x-large;
+}
+
+.layout {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 14% 79% 7%;
+}
+
+.layout, .layout > * {
+    border: 1px solid;
+}
+
+header, footer {
+    grid-column: span 6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    grid-column: span 5;
+    overflow: auto;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    gap: 40px;
+}
+
+aside > a {
+    color: blue;
+}
+
+aside > a:hover {
+    color: purple;
+}
+
+.active {
+    color: green;
+}
+
+.mainPar {
+    text-align: justify;
+    margin: 40px 40px 70px 40px;
+}
+
+.animalsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.animalsContainer > img {
+    width: 180px;
+    height: 180px;
+    border: 1px solid;
+}
+
+.form-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+form > div {
+    border: 1px solid;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input, textarea, button {
+    width: 400px;
+    font-size: x-large;
+}
+
+textarea {
+    height: 90%;
+}
